@@ -19,3 +19,18 @@ print(persona1.saludar())
 
 # Usar un método
 persona1.cumplir_anios()
+
+
+# Otra clase para practicar la creación de objetos
+class Estudiante:
+    def __init__(self, nombre, curso):
+        self.nombre = nombre
+        self.curso = curso
+
+    def presentarse(self):
+        return f"Hola, soy {self.nombre} y estudio {self.curso}."
+
+
+# Crear y usar una instancia de Estudiante
+estudiante1 = Estudiante("Luis", "Matemáticas")
+print(estudiante1.presentarse())
