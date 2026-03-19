@@ -26,7 +26,10 @@ def main():
     plt.ylabel("sin(x)")
     plt.grid(True)
 
+    # Guardar la gráfica como imagen (PNG) en el directorio actual
     plt.tight_layout()
+    plt.savefig("grafica_seno.png", dpi=150)
+
     plt.show()
 
 
