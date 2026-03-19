@@ -17,3 +17,5 @@ Este repositorio contiene una serie de archivos de ejemplo para aprender los con
 11. `11_excepciones.py` - Manejo de excepciones
 12. `12_archivos.py` - Lectura y escritura de archivos
 13. `13_herencia.py` - Herencia de clases
+14. `14_tkinter.py` - Interfaz gráfica simple con Tkinter
+15. `15_mpl_graficas.py` - Gráficas interactivas con matplotlib
