@@ -72,6 +72,12 @@ class GestorTareas:
             porcentaje = (completadas / total) * 100
             print(f"Progreso: {porcentaje:.1f}%")
         print("="*60 + "\n")
+    
+    def limpiar_completadas(self):
+        """Elimina todas las tareas completadas."""
+        cantidad_eliminadas = len([t for t in self.tareas if t['completada']])
+        self.tareas = [t for t in self.tareas if not t['completada']]
+        print(f"🧹 Se eliminaron {cantidad_eliminadas} tarea(s) completada(s)")
 
 def mostrar_menu():
     """Muestra el menú principal."""
@@ -83,7 +89,8 @@ def mostrar_menu():
     print("3. Marcar tarea como completada")
     print("4. Eliminar tarea")
     print("5. Ver estadísticas")
-    print("6. Salir")
+    print("6. Limpiar tareas completadas")
+    print("7. Salir")
     print("="*60)
 
 def main():
@@ -97,7 +104,7 @@ def main():
     
     while True:
         mostrar_menu()
-        opcion = input("Seleccione una opción (1-6): ").strip()
+        opcion = input("Seleccione una opción (1-7): ").strip()
         
         if opcion == '1':
             descripcion = input("Ingrese la descripción de la tarea: ").strip()
@@ -129,11 +136,14 @@ def main():
             gestor.obtener_estadisticas()
         
         elif opcion == '6':
+            gestor.limpiar_completadas()
+        
+        elif opcion == '7':
             print("\n👋 ¡Gracias por usar el Gestor de Tareas!")
             break
         
         else:
-            print("❌ Opción inválida. Por favor, seleccione una opción válida (1-6)")
+            print("❌ Opción inválida. Por favor, seleccione una opción válida (1-7)")
 
 if __name__ == "__main__":
     main()
