@@ -1,6 +1,12 @@
 """
 Mario Bros 1 - Versión simplificada en Pygame
 Un juego de plataformas inspirado en el clásico Mario Bros
+
+Características:
+- Control de jugador con movimiento horizontal
+- Sistema de saltos y gravedad realista
+- Plataformas coleccionables
+- Sistema de vidas y puntuación
 """
 
 import pygame
