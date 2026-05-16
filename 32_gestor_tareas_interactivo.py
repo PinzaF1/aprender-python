@@ -2,13 +2,23 @@
 """
 Gestor de Tareas Interactivo
 Una aplicación para gestionar tareas pendientes, completadas y eliminarlas.
+
+Características:
+- Agregar nuevas tareas
+- Marcar tareas como completadas
+- Listar todas las tareas
+- Eliminar tareas
+- Interfaz de menú interactiva
+
+Autor: Sistema de Aprendizaje Python
+Versión: 1.0
 """
 
 class GestorTareas:
-    """Clase para gestionar una lista de tareas."""
+    """Clase para gestionar una lista de tareas con operaciones CRUD básicas."""
     
     def __init__(self):
-        """Inicializa el gestor de tareas."""
+        """Inicializa el gestor de tareas con lista vacía."""
         self.tareas = []
         self.contador_id = 1
     
