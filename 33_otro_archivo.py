@@ -36,3 +36,19 @@ class MiContextManager:
 # Usar context manager
 # with MiContextManager() as cm:
 #     print("Dentro del contexto")
+
+# 3. METACLASES
+# Las metaclases son clases cuyas instancias son clases
+
+class MetaclaseMi(type):
+    def __new__(mcs, nombre, bases, attrs):
+        print(f"Creando clase: {nombre}")
+        return super().__new__(mcs, nombre, bases, attrs)
+
+class MiClase(metaclass=MetaclaseMi):
+    def __init__(self, valor):
+        self.valor = valor
+
+# Crear instancia
+# obj = MiClase(42)
+# print(obj.valor)
