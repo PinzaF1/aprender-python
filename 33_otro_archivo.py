@@ -20,3 +20,19 @@ def saludar(nombre):
 
 # Usar el decorador
 # print(saludar("Carlos"))
+
+# 2. CONTEXT MANAGERS
+# Los context managers permiten manejar recursos de forma segura
+
+class MiContextManager:
+    def __enter__(self):
+        print("Entrando al contexto")
+        return self
+    
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Saliendo del contexto")
+        return False
+
+# Usar context manager
+# with MiContextManager() as cm:
+#     print("Dentro del contexto")
