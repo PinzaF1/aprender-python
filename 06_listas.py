@@ -32,3 +32,13 @@ for fruta in frutas:
 matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("Matriz:", matriz)
 print("Elemento en [1][2]:", matriz[1][2])
+
+# Funciones útiles con listas
+numeros = [3, 1, 4, 1, 5, 9, 2, 6]
+print("\nOperaciones con números:")
+print("Lista:", numeros)
+print("Suma:", sum(numeros))
+print("Máximo:", max(numeros))
+print("Mínimo:", min(numeros))
+print("Ordenada:", sorted(numeros))
+print("Elementos únicos:", list(set(numeros)))
